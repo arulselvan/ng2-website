@@ -6,20 +6,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { ContactComponent } from './contact/contact.component';
-import { TopNavigationComponent } from './shared/top-navigation/top-navigation.component'
+import { TopNavigationComponent } from './shared/top-navigation/top-navigation.component';
+import { PageComponent } from './page/page.component'
 
 
 const appRoutes: Routes = [
-  { path: 'about', component: AboutComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+  { path: '', component: HomeComponent ,pathMatch:'full'},
+  { path: ':slug',
+    component: PageComponent
   }
 ];
 
@@ -27,10 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
-    ServicesComponent,
-    ContactComponent,
-    TopNavigationComponent
+    TopNavigationComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
