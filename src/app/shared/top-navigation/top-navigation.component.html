@@ -1,9 +1,32 @@
-<ul class="topnav" #topnav>
-  <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-  <li><a [routerLink]="['about']" routerLinkActive="active">About</a></li>
-  <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
-  <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-  <li class="icon">
-    <a (click)="toggle()">&#9776;</a>
-  </li>
-</ul>
+<md-toolbar color="primary">
+  <span> WizClue </span>
+  <ul class="topnav mdl-navigation" #topnav >
+    <li class="mdl-navigation__link"><a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li class="mdl-navigation__link"><a [routerLink]="['about']" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    <li class="icon">
+      <a (click)="toggle()">&#9776;</a>
+    </li>
+  </ul>
+</md-toolbar>
+
+<!--
+
+<div class="menu-section">
+      <p>You clicked on: {{ selected }}</p>
+
+    <md-toolbar color="primary">
+      <button md-icon-button [mdMenuTriggerFor]="menu" aria-label="Open basic menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+    </md-toolbar>
+
+      <md-menu #menu="mdMenu" color="primary">
+      <button md-menu-item *ngFor="let item of items" (click)="select(item.text)" [disabled]="item.disabled">
+        {{ item.text }}
+      </button>
+    </md-menu>
+</div>-->
+
+  
